@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="image/favicon.png">
+    <link rel="icon" type="image/png" href="image/logo.png">
     <title>Rifan Profile</title>
     <style>
         /* INI BAGIAN RESET STYLE */
@@ -61,8 +61,12 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
-            margin-left: 30px;
+            margin-left: 17px;
             color: #d4a7ff;
+            width: 50px; /* Sesuaikan ukuran */
+            height: 50px;
+            background: url('image/logo.png');
+            background-size: cover;
         }
 
         nav ul {
@@ -277,7 +281,8 @@
         .skills {
             text-align: center;
             margin-top: 50px;
-            width: 80%;
+            margin-left: 100px;
+            width: 100%;
         }
 
         .skill-title {
@@ -294,7 +299,7 @@
         }
 
         .skill {
-            width: 200px; /* Lebar tiap skill */
+            width: 250px; /* Lebar tiap skill */
             margin-top: 40px;
             margin: 30px;
             text-align: center;
@@ -332,7 +337,7 @@
 <body>
     <header>
       <!--  <h1>Portfolio</h1> -->
-        <div class="logo">MyLogo</div>
+        <div class="logo"></div>
         <nav>
             <ul>
                 <li><a href="#home" class="active" onclick="scrollToSection(0)">Home</a></li>
