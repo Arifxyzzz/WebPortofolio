@@ -2,4 +2,6 @@
 
 My personal portfolio
 
+
+preview? [My Portofolio]([https://example.com](https://axzy.netlify.app/))
 With a simple but elegant design, you can use this template. but it is STRICTLY FORBIDDEN to trade
