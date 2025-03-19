@@ -19,6 +19,9 @@
             background-color: #1D1121;
             color: #ffffff;
             overflow: hidden;
+            background: url('image/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+
         }
 
         /* INI BAGIAN CONTAINER UNTUK PAGE SLIDER */
@@ -44,7 +47,7 @@
             width: 100%;
             top: 0;
             left: 0;
-            background: #1D1121;
+            background: #1d112100;
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -59,7 +62,7 @@
             font-size: 24px;
             font-weight: bold;
             margin-left: 30px;
-            color: #E3B900;
+            color: #d4a7ff;
         }
 
         nav ul {
@@ -89,7 +92,7 @@
 
         /* INI BAGIAN GARIS NAVBAR */
         nav ul li a.active {
-            color: #E3B900;
+            color: #d4a7ff;
         }
 
         nav ul li a::after {
@@ -97,7 +100,7 @@
             display: block;
             width: 100%;
             height: 2px;
-            background-color: #E3B900;
+            background-color: #d4a7ff;
             position: absolute;
             bottom: 15;
             left: 0;
@@ -155,7 +158,7 @@
 
         .hero-text p {
             font-size: 20px;
-            color: #E3B900;
+            color: #d4a7ff;
         }
         /* INI BAGIAN FOTO PROFIL */
         .hero-profile {
@@ -214,7 +217,7 @@
            align-items: center;
            justify-content: center;
            border-radius: 15px;
-           margin-top: 230px;
+           margin-top: 170px;
            width: 700%;
            height: 800%;
            position: relative;
@@ -226,8 +229,30 @@
            font-size: 18px;
            text-indent: 40px;
            margin-left: 110px;
+           margin-bottom: 10px;
            letter-spacing: 1px; /* Mengatur jarak antar huruf */
            line-height: 1.5;
+           padding: 50px;
+           border: 3px solid #fbedff7a;
+           background-color: rgba(58, 46, 64, 0.486); /* Warna padding */
+           border-radius: 20px; /* Membuat sudut melengkung */
+           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Bayangan */
+           transition: background 3s, color 0.3s, transform 0.3s;
+        }
+
+        .about-text:hover {
+            border: 3px solid #d4a7ff;
+            background: linear-gradient(to right, #d4a7ff, #8325ff);
+            -webkit-background-clip: text;
+            color: transparent;
+            position: relative;
+            transform: translateY(-10px);
+        }
+
+        .about-title {
+            color: #fffeff;
+            text-indent: 0px;
+            margin-bottom: 70px;
         }
 
         .about-profile {
@@ -251,9 +276,15 @@
         /* INI BAGIAN SKILLS */
         .skills {
             text-align: center;
-            margin-top: 200px;
+            margin-top: 50px;
             width: 80%;
         }
+
+        .skill-title {
+            color: #fffeff;
+            margin-bottom: 30px;
+        }
+    
 
         .skills-container {
             display: flex;
@@ -264,16 +295,16 @@
 
         .skill {
             width: 200px; /* Lebar tiap skill */
-            margin-top: 30px;
+            margin-top: 40px;
             margin: 30px;
             text-align: center;
             transition: transform 0.3s;
         }
 
         .skill:hover {
-             transform: scale(1.1);
-             color: #ffc400;
-             cursor: pointer;
+            transform: scale(1.1);
+            color: #c884ff;
+            cursor: pointer;
         }
 
         .skill-bar {
@@ -287,12 +318,11 @@
         .skill-bar span {
             display: block;
             height: 20px;
-            background-color: #E3B900;
+            background-color: #a200ff;
             width: 0;
             border-radius: 10px;
             transition: width 2s ease-in-out;
         }
-
 
 
     </style>
@@ -319,7 +349,7 @@
             <div class="hero-text">
                 <p>Hello, I'm</p>
                 <h1>Rifan Khakim</h1>
-                <p>I'm a <span style="color: #ff0055;">Graphic Designer</span></p>
+                <p>I'm a <span style="color: #a442ff;">Graphic Designer</span></p>
                 <div class="social-icons">
                     <a href="https://github.com/Arifxyzzz" target="_blank"><i class="bi bi-github"></i></a>
                     <a href="https://www.instagram.com/axzydesign" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -335,11 +365,12 @@
         <!-- INI BAGIAN ABOUT -->
         <section id="about" class="about-container">
             <div class="about-text">
+                <h2 class="about-title">About Me <span style="color: #a442ff;">━</span></h2>
                 <p>Hi everyone! My name is Rifan, a passionate graphic designer and front-end developer. I specialize in creating visually appealing designs and user-friendly web interfaces. With a strong interest in digital creativity, I enjoy working on projects like logos, posters, banners, and UI/UX design. Aside from designing, I also manage CornezzSMP, a Minecraft server that reflects my love for gaming and community building. Always eager to learn and grow, I strive to improve my skills and bring fresh, innovative ideas to every project.</p>
             </div>
             
             <div class="skills">
-                <h2 style="color: #a200ff;">My Skills</h2>
+                <h2 class="skill-title">My Skills</h2>
                 <div class="skills-container">
                     <div class="skill">
                         <div class="skill-label">CorelDraw</div>
@@ -380,8 +411,13 @@
          <!-- Section Skills -->
 
         <!-- INI BAGIAN PORTFOLIO -->
-        <section id="portfolio" class="portfolio">
-            <h2>My Work</h2>
+        <section id="portfolio" class="portfolio-container">
+            <h2 class="portfolio-title">Gallery <span style="color: #a442ff;">━</span></h2>
+            <div class="portfolio-container">
+                <div class="portfolio">
+                    <div class="portfolio-label">CorelDraw</div>
+            
+            </div>
         </section>
 
         <!-- INI BAGIAN CONTACT -->
