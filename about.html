@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<!--
+
+ - FILE ASLI MILIK RIFAN KHAKIM
+ - DIBUAT DENGAN SEPENUH HATI DAN CINTA
+ - DILARANG MENJUAL TEMPLATE, KETAHUAN SAYA PENJARAKAN AWOKKAWOK
+
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="image/logo.png">
+    <title>About Rifan</title>
+    <style>
+        /* INI BAGIAN RESET STYLE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lexend', sans-serif;
+        }
+
+        /* INI BAGIAN BACKGROUND SEMUA */
+        body {
+            background-color: #1D1121;
+            color: #ffffff;
+            overflow: hidden;
+            background: url('image/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+
+        }
+
+        /* INI BAGIAN CONTAINER UNTUK PAGE SLIDER */
+        .container {
+            display: flex;
+            width: 100vw;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* INI BAGIAN HEADER DAN NAVBAR */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #1d112100;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 17px;
+            color: #d4a7ff;
+            width: 50px; /* Sesuaikan ukuran */
+            height: 50px;
+            background: url('image/logo.png');
+            background-size: cover;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            margin-right: 650px;
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 30px;
+        }
+
+        nav ul li a {
+            color: #5b4663;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+            cursor: pointer;
+            padding-bottom: 5px;
+            margin: 4px;
+        }
+
+        /* INI BAGIAN GARIS NAVBAR */
+        nav ul li a.active {
+            color: #d4a7ff;
+        }
+
+        nav ul li a::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #d4a7ff;
+            position: absolute;
+            bottom: 15;
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav ul li a.active::after {
+            transform: scaleX(1);
+        }
+
+        /* INI BAGIAN ABOUT */
+        .about-container {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           border-radius: 15px;
+           margin-top: 170px;
+           width: 700%;
+           height: 800%;
+        }
+        
+
+        .about-text {
+           width: 1700px;
+           max-width: 1700px;
+           font-size: 18px;
+           text-indent: 40px;
+           margin-bottom: 10px;
+           letter-spacing: 1px; /* Mengatur jarak antar huruf */
+           line-height: 1.5;
+           padding: 40px;
+           padding-left: 350px;
+           border: 3px solid #fbedff7a;
+           background-color: rgba(58, 46, 64, 0.486); /* Warna padding */
+           border-radius: 20px; /* Membuat sudut melengkung */
+           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Bayangan */
+           transition: background 3s, color 0.3s, transform 0.3s;
+           animation: fadeInText 0.5s ease-in-out forwards;
+        }
+
+        /* Animasi untuk teks */
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                        opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about-text:hover {
+            border: 3px solid #d4a7ff;
+            background: linear-gradient(to right, #d4a7ff, #8325ff);
+            -webkit-background-clip: text;
+            color: transparent;
+            position: relative;
+            transform: translateY(-10px);
+        }
+
+        .about-title {
+            color: #fffeff;
+            text-indent: 0px;
+            margin-bottom: 70px;
+        }
+
+        .about-profile {
+           width: 300px;
+           height: 300px;
+           border-radius: 10%;
+           background: url('image/logo.png') no-repeat center;
+           background-size: cover;
+           margin-left: -320px;
+           margin-top: -20px;
+           margin-bottom: -270px;
+           border: 3px solid #e3b90000;
+           transition: transform 0.3s;
+        }
+
+        .about-profile:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        /* INI BAGIAN SKILLS */
+        .skills {
+            text-align: center;
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        .skill-title {
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+    
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Jarak antar skill */
+            
+        }
+
+        .skill {
+            width: 350px; /* Lebar tiap skill */
+            margin-top: 40px;
+            margin: 30px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
+            color: #c884ff;
+            cursor: pointer;
+        }
+
+        .skill-bar {
+            width: 100%;
+            background-color: #3A2E40;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .skill-bar span {
+            display: block;
+            height: 20px;
+            background-color: #a200ff;
+            width: 0;
+            border-radius: 10px;
+            transition: width 2s ease-in-out;
+            animation: width 3s ease-in-out; /* Animasi dari 0 ke total */
+        }
+        
+
+        /* Animasi untuk skill-bar span */
+        @keyframes fillBar {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%; /* Bisa disesuaikan dengan persentase skill */
+            }
+        }
+
+
+
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+      <!--  <h1>Portfolio</h1> -->
+        <div class="logo"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="service.html">Service</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <!-- INI BAGIAN HOME -->
+        <section id="home" class="about-container">
+            <div class="about-text">
+                <div class="about-profile"></div>
+                <h2 class="about-title">About Me <span style="color: #a442ff;">━</span></h2>
+                <p>Hi everyone! My name is Rifan, a passionate graphic designer and beginner front-end developer. I specialize in creating visually appealing designs and user-friendly web interfaces. With a strong interest in digital creativity, I enjoy working on projects like logos, posters, banners, and UI/UX design. Aside from designing, I also manage CornezSMP, a Minecraft server that reflects my love for gaming and community building. Always eager to learn and grow, I strive to improve my skills and bring fresh, innovative ideas to every project.</p>
+            </div>
+            
+            
+            <div class="skills">
+                <h2 class="skill-title">My Skills</h2>
+                <div class="skills-container">
+                    <div class="skill">
+                        <div class="skill-label">CorelDraw</div>
+                        <div class="skill-bar"><span style="width: 90%;"></span></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-label">PixelLab</div>
+                        <div class="skill-bar"><span style="width: 100%;"></span></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-label">PapaerMC</div>
+                        <div class="skill-bar"><span style="width: 85%;"></span></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-label">Velocity</div>
+                        <div class="skill-bar"><span style="width: 80%;"></span></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-label">MCModel</div>
+                        <div class="skill-bar"><span style="width: 70%;"></span></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-label">HTML</div>
+                        <div class="skill-bar"><span style="width: 45%;"></span></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-label">CSS</div>
+                        <div class="skill-bar"><span style="width: 40%;"></span></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-label">JavaScript</div>
+                        <div class="skill-bar"><span style="width: 10%;"></span></div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+         <!-- Section Skills -->
+    </div>
+
+    <script>
+        function scrollToSection(index) {
+            document.querySelector('.container').style.transform = `translateX(-${index * 100}vw)`;
+            document.querySelectorAll("nav ul li a").forEach(link => link.classList.remove("active"));
+            document.querySelectorAll("nav ul li a")[index].classList.add("active");
+        }
+        // Menunggu hingga konten halaman dimuat sepenuhnya
+        document.addEventListener("DOMContentLoaded", function() {
+    // Ambil semua skill-bar span
+            const skillBars = document.querySelectorAll('.skill-bar span');
+    
+    // Iterasi pada setiap skill-bar span dan terapkan animasi berdasarkan lebar yang sudah ditentukan
+            skillBars.forEach(bar => {
+                const width = bar.style.width; // Ambil nilai lebar dari inline style (seperti 90%, 70%, dll)
+                bar.style.width = '0'; // Mulai dari 0
+        
+        // Animasi dari 0 ke nilai width yang sudah ditentukan
+                setTimeout(() => {
+                    bar.style.width = width; // Setel lebar ke nilai yang sudah ditentukan
+                }, 100); // Sedikit delay agar animasi dapat terlihat
+            });
+        });
+
+    </script>
+</body>
+</html>

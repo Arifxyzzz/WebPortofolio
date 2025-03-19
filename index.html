@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="image/logo.png">
-    <title>Rifan Profile</title>
+    <title>Rifan Khakim</title>
     <style>
         /* INI BAGIAN RESET STYLE */
         * {
@@ -34,7 +34,7 @@
         /* INI BAGIAN CONTAINER UNTUK PAGE SLIDER */
         .container {
             display: flex;
-            width: 400vw;
+            width: 100vw;
             transition: transform 0.5s ease-in-out;
         }
 
@@ -136,8 +136,6 @@
             align-items: center;
             width: 80%;
             margin: auto;
-            margin-left: 290px;
-            margin-right: 4100px;
             animation: fadeInText 0.5s ease-in-out forwards;
         }
 
@@ -156,7 +154,7 @@
         .hero-text {
             max-width: 50%;
             white-space: nowrap;
-            margin-right: 1200px;
+            margin-right: 1100px;
             transform: translateY(50px);
             transition: opacity 1s ease-out, transform 1s ease-out;
         }
@@ -188,7 +186,8 @@
             background: url('image/profile.png') no-repeat center;
             background-size: cover;
             position: absolute;
-            margin-left: 200px;
+            margin-left: 900px;
+            margin-right: -150px;
             right: 10%;
             top: 50%;
             transform: translateY(-50%);
@@ -228,121 +227,23 @@
              cursor: pointer;
         }
 
-
-        /* INI BAGIAN HERO (HOME SECTION) */
-        
-        /* INI BAGIAN ABOUT */
-        .about-container {
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           border-radius: 15px;
-           margin-top: 170px;
-           width: 700%;
-           height: 800%;
-           position: relative;
-        }
-        
-
-        .about-text {
-           max-width: 200%;
-           font-size: 18px;
-           text-indent: 40px;
-           margin-left: 110px;
-           margin-bottom: 10px;
-           letter-spacing: 1px; /* Mengatur jarak antar huruf */
-           line-height: 1.5;
-           padding: 50px;
-           border: 3px solid #fbedff7a;
-           background-color: rgba(58, 46, 64, 0.486); /* Warna padding */
-           border-radius: 20px; /* Membuat sudut melengkung */
-           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Bayangan */
-           transition: background 3s, color 0.3s, transform 0.3s;
-        }
-
-        .about-text:hover {
-            border: 3px solid #d4a7ff;
-            background: linear-gradient(to right, #d4a7ff, #8325ff);
-            -webkit-background-clip: text;
+        .animated-text {
+            font-weight: bold;
             color: transparent;
-            position: relative;
-            transform: translateY(-10px);
-        }
-
-        .about-title {
-            color: #fffeff;
-            text-indent: 0px;
-            margin-bottom: 70px;
-        }
-
-        .about-profile {
-           width: 300px;
-           height: 300px;
-           position: absolute;
-           border-radius: 10%;
-           background: url('image/profile.png') no-repeat center;
-           background-size: cover;
-           margin-right: 900px;
-           margin-bottom: 300px;
-           border: 3px solid #e3b90000;
-           transition: transform 0.3s;
-        }
-
-        .about-profile:hover {
-             transform: scale(1.1);
-             cursor: pointer;
-        }
-
-        /* INI BAGIAN SKILLS */
-        .skills {
-            text-align: center;
-            margin-top: 50px;
-            margin-left: 100px;
-            width: 100%;
-        }
-
-        .skill-title {
-            color: #fffeff;
-            margin-bottom: 30px;
-        }
-    
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px; /* Jarak antar skill */
-        }
-
-        .skill {
-            width: 250px; /* Lebar tiap skill */
-            margin-top: 40px;
-            margin: 30px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .skill:hover {
-            transform: scale(1.1);
-            color: #c884ff;
-            cursor: pointer;
-        }
-
-        .skill-bar {
-            width: 100%;
-            background-color: #3A2E40;
-            border-radius: 10px;
+            background: linear-gradient(90deg, #a442ff, #ff42a1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-right: 3px solid #e4c8ff5e; /* Efek kursor */
+            padding-right: 0px;
+            display: inline;
+            white-space: nowrap;
             overflow: hidden;
-            margin-top: 5px;
+            animation: blinkCursor 0.8s infinite;
         }
 
-        .skill-bar span {
-            display: block;
-            height: 20px;
-            background-color: #a200ff;
-            width: 0;
-            border-radius: 10px;
-            transition: width 2s ease-in-out;
+        /* Animasi kursor berkedip */
+        @keyframes blinkCursor {
+            50% { border-color: transparent; }
         }
 
 
@@ -356,10 +257,10 @@
         <div class="logo"></div>
         <nav>
             <ul>
-                <li><a href="#home" class="active" onclick="scrollToSection(0)">Home</a></li>
-                <li><a href="#about" onclick="scrollToSection(1)">About</a></li>
-                <li><a href="#portfolio" onclick="scrollToSection(2)">Portfolio</a></li>
-                <li><a href="#contact" onclick="scrollToSection(3)">Contact</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="service.html">Service</a></li>
             </ul>
         </nav>
     </header>
@@ -370,7 +271,7 @@
             <div class="hero-text">
                 <p>Hello, I'm</p>
                 <h1>Rifan Khakim</h1>
-                <p>I'm a <span style="color: #a442ff;">Graphic Designer</span></p>
+                <p>I'm a <span class="animated-text"></span></p>
                 <div class="social-icons">
                     <a href="https://github.com/Arifxyzzz" target="_blank"><i class="bi bi-github"></i></a>
                     <a href="https://www.instagram.com/axzydesign" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -381,76 +282,6 @@
             <div class="hero-profile"></div>
 
         </section>
-        
-
-        <!-- INI BAGIAN ABOUT -->
-        <section id="about" class="about-container">
-            <div class="about-text">
-                <h2 class="about-title">About Me <span style="color: #a442ff;">━</span></h2>
-                <p>Hi everyone! My name is Rifan, a passionate graphic designer and beginner front-end developer. I specialize in creating visually appealing designs and user-friendly web interfaces. With a strong interest in digital creativity, I enjoy working on projects like logos, posters, banners, and UI/UX design. Aside from designing, I also manage CornezSMP, a Minecraft server that reflects my love for gaming and community building. Always eager to learn and grow, I strive to improve my skills and bring fresh, innovative ideas to every project.</p>
-            </div>
-            
-            <div class="skills">
-                <h2 class="skill-title">My Skills</h2>
-                <div class="skills-container">
-                    <div class="skill">
-                        <div class="skill-label">CorelDraw</div>
-                        <div class="skill-bar"><span style="width: 90%;"></span></div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-label">PixelLab</div>
-                        <div class="skill-bar"><span style="width: 100%;"></span></div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-label">PapaerMC</div>
-                        <div class="skill-bar"><span style="width: 85%;"></span></div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-label">Velocity</div>
-                        <div class="skill-bar"><span style="width: 80%;"></span></div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-label">MCModel</div>
-                        <div class="skill-bar"><span style="width: 70%;"></span></div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-label">HTML</div>
-                        <div class="skill-bar"><span style="width: 45%;"></span></div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-label">CSS</div>
-                        <div class="skill-bar"><span style="width: 40%;"></span></div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-label">JavaScript</div>
-                        <div class="skill-bar"><span style="width: 10%;"></span></div>
-                    </div>
-                </div>
-            </div>
-            
-        </section>
-         <!-- Section Skills -->
-
-        <!-- INI BAGIAN PORTFOLIO -->
-        <section id="portfolio" class="portfolio-container">
-            <h2 class="portfolio-title">Gallery <span style="color: #a442ff;">━</span></h2>
-            <div class="portfolio-container">
-                <div class="portfolio">
-                    <div class="portfolio-label">CorelDraw</div>
-            
-            </div>
-        </section>
-
-        <!-- INI BAGIAN CONTACT -->
-        <section id="contact" class="contact">
-            <h2>Contact Me</h2>
-            <p>Email: example@example.com</p>
-            <div class="social-icons">
-                <a href="#" target="_blank">🔗</a>
-                <a href="#" target="_blank">🔗</a>
-                <a href="#" target="_blank">🔗</a>
-            </div>
-        </section>
     </div>
 
     <script>
@@ -459,6 +290,39 @@
             document.querySelectorAll("nav ul li a").forEach(link => link.classList.remove("active"));
             document.querySelectorAll("nav ul li a")[index].classList.add("active");
         }
+
+        const words = ["Graphic Designer", "Web Designer", "Minecraft Server Developer"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let currentText = "";
+        let isDeleting = false;
+        const speed = 100; // Kecepatan ketikan
+        const delay = 2000; // Waktu sebelum ganti kata
+
+        function typeEffect() {
+            const animatedText = document.querySelector(".animated-text");
+
+            if (!isDeleting) {
+                currentText = words[wordIndex].substring(0, charIndex + 1);
+                charIndex++;
+            } else {
+                currentText = words[wordIndex].substring(0, charIndex - 1);
+                charIndex--;
+            }
+
+            animatedText.innerHTML = currentText;
+
+            if (!isDeleting && charIndex === words[wordIndex].length) {
+                setTimeout(() => isDeleting = true, delay);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+            }
+
+            setTimeout(typeEffect, isDeleting ? speed / 2 : speed);
+        }
+
+        document.addEventListener("DOMContentLoaded", typeEffect);
     </script>
 </body>
 </html>

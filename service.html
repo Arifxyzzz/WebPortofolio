@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--
+
+ - FILE ASLI MILIK RIFAN KHAKIM
+ - DIBUAT DENGAN SEPENUH HATI DAN CINTA
+ - DILARANG MENJUAL TEMPLATE, KETAHUAN SAYA PENJARAKAN AWOKKAWOK
+
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="image/logo.png">
+    <title>Rifan Khakim</title>
+    <style>
+        /* INI BAGIAN RESET STYLE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lexend', sans-serif;
+        }
+
+        /* INI BAGIAN BACKGROUND SEMUA */
+        body {
+            background-color: #1D1121;
+            color: #ffffff;
+            overflow: hidden;
+            background: url('image/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+
+        }
+
+        /* INI BAGIAN CONTAINER UNTUK PAGE SLIDER */
+        .container {
+            display: flex;
+            width: 100vw;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* INI BAGIAN HEADER DAN NAVBAR */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #1d112100;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 17px;
+            color: #d4a7ff;
+            width: 50px; /* Sesuaikan ukuran */
+            height: 50px;
+            background: url('image/logo.png');
+            background-size: cover;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            margin-right: 650px;
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 30px;
+        }
+
+        nav ul li a {
+            color: #5b4663;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+            cursor: pointer;
+            padding-bottom: 5px;
+            margin: 4px;
+        }
+
+        /* INI BAGIAN GARIS NAVBAR */
+        nav ul li a.active {
+            color: #d4a7ff;
+        }
+
+        nav ul li a::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #d4a7ff;
+            position: absolute;
+            bottom: 15;
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav ul li a.active::after {
+            transform: scaleX(1);
+        }
+
+        /* INI BAGIAN HERO (HOME SECTION) */
+        /* RESET STYLE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lexend', sans-serif;
+        }
+
+/* BACKGROUND */
+
+/* TITLE */
+        .service-title {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+/* CONTAINER */
+        .service-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        /* ITEM STYLE */
+        .service-item {
+            width: 350px;
+            height: 500px;
+            padding: 20px;
+            background: #3a2e4071;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.5s;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        /* Saat masuk viewport */
+        .service-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* HOVER EFFECT */
+        .service-item:hover {
+            transform: translateY(-20px);
+            box-shadow: 0px 5px 15px rgba(134, 68, 255, 0.2);
+            border: 2px solid #a673fd;
+        }
+
+        /* IMAGE STYLE */
+        .service-item img {
+            width: 200px;
+            height: 200px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+
+        /* Animasi hover pada gambar */
+        .service-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* TEXT STYLE */
+        .service-item h3 {
+            font-size: 22px;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            color: #d4a7ff;
+        }
+
+        .service-item p {
+            font-size: 16px;
+            color: #bfa3d1;
+        }
+
+        /* ANIMASI MASUK */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .service-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+      <!--  <h1>Portfolio</h1> -->
+        <div class="logo"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="service.html" class="active">Service</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <!-- INI BAGIAN HOME -->
+        <section id="services">
+            <h2 class="service-title">My Services</h2>
+            <div class="service-container">
+                <div class="service-item" onclick="window.open('https://www.instagram.com/axzydesign', '_blank')">
+                    <img src="image/icon1.png" alt="Graphic Design">
+                    <h3>Graphic Design</h3>
+                    <p>Creating visually appealing designs for logos, posters, and banners.</p>
+                </div>
+                <div class="service-item" onclick="window.open('https://www.instagram.com/axzydesign', '_blank')">
+                    <img src="image/icon2.png" alt="Web Design">
+                    <h3>Web Design</h3>
+                    <p>Building modern and responsive websites with the latest technologies.</p>
+                </div>
+                <div class="service-item" onclick="window.open('https://discord.gg/cWFuC7wcaQ', '_blank')">
+                    <img src="image/icon3.png" alt="Minecraft Server Setup">
+                    <h3>Minecraft Server Setup</h3>
+                    <p>Setting up and optimizing Minecraft servers for the best gameplay experience.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Animasi masuk saat scroll
+        function revealOnScroll() {
+            const elements = document.querySelectorAll('.service-item');
+            elements.forEach(item => {
+                const itemPosition = item.getBoundingClientRect().top;
+                const screenHeight = window.innerHeight;
+                if (itemPosition < screenHeight - 50) {
+                    item.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+    </script>
+</body>
+</html>
